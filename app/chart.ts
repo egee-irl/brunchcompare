@@ -1,8 +1,7 @@
 const Chart = require("chart.js");
 
-let canvas = <HTMLCanvasElement>document.getElementById("myChart");
-let ctx = canvas.getContext("2d");
-let myChart = new Chart(ctx, {
+const canvas = <HTMLCanvasElement>document.getElementById("myChart");
+new Chart(canvas.getContext("2d"), {
   type: 'bar',
   data: {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
