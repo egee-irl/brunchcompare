@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Probable Memory</title>
+  <link rel="stylesheet" href="../node_modules/xel/themes/vanilla.css">
+  <script src="../node_modules/xel/xel.min.js"></script>
+</head>
+
+<body>
+  <x-menubar>
+    <x-menuitem>
+      <x-label>File</x-label>
+      <x-menu>
+        <x-menuitem>
+          <x-label>New</x-label>
+          <x-shortcut value='Control+N'></x-shortcut>
+        </x-menuitem>
+        <x-menuitem>
+          <x-label>Open…</x-label>
+          <x-shortcut value='Control+O'></x-shortcut>
+        </x-menuitem>
+        <hr>
+        <x-menuitem>
+          <x-label>Save</x-label>
+          <x-shortcut value='Control+S'></x-shortcut>
+        </x-menuitem>
+        <x-menuitem>
+          <x-label>Save as…</x-label>
+          <x-shortcut value='Control+Shift+S'></x-shortcut>
+        </x-menuitem>
+        <hr>
+        <x-menuitem>
+          <x-label>Close</x-label>
+          <x-shortcut value='Control+W'></x-shortcut>
+        </x-menuitem>
+        <x-menuitem>
+          <x-label>Quit</x-label>
+          <x-shortcut value='Control+Q'></x-shortcut>
+        </x-menuitem>
+      </x-menu>
+    </x-menuitem>
+  </x-menubar>
+
+  <x-card style='width: 25%; float: left; margin: 5px;'>
+    <main>
+      <x-label>Runners</x-label>
+      <hr>
+      <x-button style='margin-left: 5px; margin-top: 5px;'>
+        <x-box>
+          <x-icon name='security'></x-icon>
+          <x-label>Dos</x-label>
+        </x-box>
+      </x-button>
+      <x-button style='margin-left: 5px; margin-top: 5px;'>
+        <x-box>
+          <x-icon name='bug-report'></x-icon>
+          <x-label>Native</x-label>
+        </x-box>
+      </x-button>
+      <x-button style='margin-left: 5px; margin-top: 5px;'>
+        <x-box>
+          <x-icon name='games'></x-icon>
+          <x-label>Console</x-label>
+        </x-box>
+      </x-button>
+      <x-button style='margin-left: 5px; margin-top: 5px;'>
+        <x-box>
+          <x-icon name='local-drink'></x-icon>
+          <x-label>Wine</x-label>
+        </x-box>
+      </x-button>
+    </main>
+  </x-card>
+  <x-box vertical style='margin: 5px;'>
+    <strong>Probable Memory</strong>
+    <p>Gotta start somewhere, yo</p>
+    <x-box>
+      <img src="../assets/chip.png" alt="Italian Trulli">
+    </x-box>
+</body>
+
+</html>
