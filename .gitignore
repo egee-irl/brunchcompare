@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+# Out files
+dist/*
+
+# Test result files
+junit.xml
