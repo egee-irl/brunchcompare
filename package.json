@@ -1,31 +1,26 @@
 {
-  "name": "probable-memory",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:egee-irl/probable-memory.git",
-  "author": "egee-irl <brian@egee.io>",
-  "license": "MIT",
-  "scripts": {
-    "start": "./node_modules/.bin/electron ./dist/main.js",
-    "restart": "yarn build && ./node_modules/.bin/electron ./dist/main.js",
-    "build": "node_modules/.bin/tsc --build tsconfig.json && cp ./app/index.html ./dist",
-    "rebuild": "yarn clean && yarn run build",
-    "clean": "rm -rf dist/* && touch dist/.gitkeep",
-    "test": "node_modules/.bin/jest --runInBand --ci --reporters=default --reporters=jest-junit"
-  },
-  "dependencies": {
-    "browserify": "^16.5.0",
-    "electron": "^6.0.10"
+  "name": "Brunchcompare",
+  "version": "0.1.0",
+  "description": "Brunchcompare application build with Electron",
+  "repository": "",
+  "dependencies": {},
+  "author": {
+    "name": "egee",
+    "email": ""
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.4",
-    "chart.js": "^2.9.0",
-    "jest": "^24.9.0",
-    "jest-junit": "^8.0.0",
-    "ts-jest": "^24.0.2",
-    "ts-lint": "^4.5.1",
-    "typescript": "^3.6.2",
-    "xel": "^0.0.212"
+    "bozon": "0.10.4",
+    "mocha": "^6.1.4",
+    "spectron": "^6.0.0"
+  },
+  "build": {
+    "appId": "com.electron.brunchcompare",
+    "win": {
+      "publish": null
+    },
+    "mac": {
+      "publish": null,
+      "category": "your.app.category.type"
+    }
   }
 }
