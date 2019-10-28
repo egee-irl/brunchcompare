@@ -1,28 +1,21 @@
 {
   "name": "brunchcompare",
-  "version": "0.1.0",
-  "description": "Brunchcompare application build with Electron",
-  "repository": "",
-  "author": {
-    "name": "egee",
-    "email": "brian@egee.io"
-  },
-  "build": {
-    "appId": "com.electron.brunchcompare",
-    "win": {
-      "publish": null
-    },
-    "mac": {
-      "publish": null,
-      "category": "your.app.category.type"
-    }
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "chart.js": "^2.9.1"
+    "@babel/runtime": "^7.3.4",
+    "meteor-node-stubs": "^0.4.1"
   },
-  "devDependencies": {
-    "bozon": "0.10.4",
-    "mocha": "^6.1.4",
-    "spectron": "^6.0.0"
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
   }
 }
