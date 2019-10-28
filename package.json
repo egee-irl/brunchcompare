@@ -1,17 +1,11 @@
 {
-  "name": "Brunchcompare",
+  "name": "brunchcompare",
   "version": "0.1.0",
   "description": "Brunchcompare application build with Electron",
   "repository": "",
-  "dependencies": {},
   "author": {
     "name": "egee",
-    "email": ""
-  },
-  "devDependencies": {
-    "bozon": "0.10.4",
-    "mocha": "^6.1.4",
-    "spectron": "^6.0.0"
+    "email": "brian@egee.io"
   },
   "build": {
     "appId": "com.electron.brunchcompare",
@@ -22,5 +16,13 @@
       "publish": null,
       "category": "your.app.category.type"
     }
+  },
+  "dependencies": {
+    "chart.js": "^2.9.1"
+  },
+  "devDependencies": {
+    "bozon": "0.10.4",
+    "mocha": "^6.1.4",
+    "spectron": "^6.0.0"
   }
 }
