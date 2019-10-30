@@ -1,0 +1,23 @@
+Distros:
+  Ubuntu1804:
+    SingleCore: 
+      Base: 478
+      Crypto: 787
+      Interger: 493
+      FloatingPoint: 394
+    MultiCore:
+      Base: 1530
+      Crypto: 1894
+      Interger: 1609
+      FloatingPoint: 1297
+  Fedora31:
+    SingleCore: 
+      Base: 478
+      Crypto: 787
+      Interger: 493
+      FloatingPoint: 394
+    MultiCore:
+      Base: 1530
+      Crypto: 1894
+      Interger: 1609
+      FloatingPoint: 1297
