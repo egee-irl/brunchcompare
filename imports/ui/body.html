@@ -1,29 +1,13 @@
 <body>
-
-  <canvas id="myChart" width="400" height="400"></canvas>
-
-  <!-- <div class="container">
-    <header>
-      <h1>Todo List ({{incompleteCount}})</h1>
-
-      <label class="hide-completed">
-        <input type="checkbox" />
-        Hide Completed Tasks
-      </label>
-
-      {{> loginButtons}}
-
-      {{#if currentUser}}
-      <form class="new-task">
-        <input type="text" name="text" placeholder="Type to add new tasks" />
-      </form>
-      {{/if}}
-    </header>
-
-    <ul>
-      {{#each tasks}}
-      {{> task}}
-      {{/each}}
-    </ul>
-  </div> -->
+  <div class="tab-group active">
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Single Core
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Multi-Core
+    </div>
+  </div>
+  <canvas id="myChart"></canvas>
 </body>
