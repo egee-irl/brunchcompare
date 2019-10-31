@@ -12,15 +12,14 @@
         "autoUpdateCheckOnStart": false
     },
     "webAppStartupTimeout": 60000,
-    "exposeLocalFilesystem": false,
+    "exposeLocalFilesystem": true,
     "window": {
         "icon": "@assets/meteor.png",
         "_windows": {
             "icon": "@assets/meteor.ico"
         }
     },
-    "windowDev": {
-    },
+    "windowDev": {},
     "uglify": true,
     "plugins": {
         "meteor-desktop-splash-screen": {
@@ -75,8 +74,17 @@
             "background": ".desktop/assets/dmgBackground.png",
             "iconSize": 54,
             "contents": [
-                { "x": 377, "y": 190, "type": "link", "path": "/Applications" },
-                { "x": 63, "y": 190, "type": "file" }
+                {
+                    "x": 377,
+                    "y": 190,
+                    "type": "link",
+                    "path": "/Applications"
+                },
+                {
+                    "x": 63,
+                    "y": 190,
+                    "type": "file"
+                }
             ],
             "window": {
                 "width": 480,

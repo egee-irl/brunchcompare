@@ -44,6 +44,7 @@ export default class Desktop {
         // reference. This is the reference to the current Electron renderer process (Chrome)
         // displaying your Meteor app.
         eventsBus.on('windowCreated', (window) => {
+            window.setMenuBarVisibility(false);
             window.webContents.on('crashed', Desktop.windowCrashedHandler);
             window.on('unresponsive', Desktop.windowUnresponsiveHandler);
         });
