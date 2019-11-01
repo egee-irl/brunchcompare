@@ -1,3 +1,7 @@
+## This ain't used yet:
+## The client can't directly access the file system
+## This file will need to be parsed via the server
+## And passed to the client via Meteor Magic
 Distros:
   Ubuntu1804:
     SingleCore: 
