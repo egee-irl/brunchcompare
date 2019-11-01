@@ -20,5 +20,5 @@ rules:
     - error
     - double
   semi:
-    - error
-    - never
+    - warn
+    - always

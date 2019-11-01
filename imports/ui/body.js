@@ -1,10 +1,10 @@
-import { Chart } from "chart.js"
-import { Template } from "meteor/templating"
+import { Chart } from "chart.js";
+import { Template } from "meteor/templating";
 
-import "./body.html"
+import "./body.html";
 
 Template.body.onRendered(() => {
-  const ctx = document.getElementById("myChart").getContext("2d")
+  const ctx = document.getElementById("myChart").getContext("2d");
   new Chart(ctx, {
     type: "bar",
     data: {
@@ -36,5 +36,5 @@ Template.body.onRendered(() => {
         }]
       }
     }
-  })
-})
+  });
+});
