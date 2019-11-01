@@ -1,2 +1,2 @@
-import "./photon.css"
+import "./main.css"
 import "../imports/ui/body.js"
