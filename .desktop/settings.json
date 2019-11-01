@@ -1,7 +1,7 @@
 {
-    "name": "My Meteor App",
-    "version": "0.0.1",
-    "projectName": "MyMeteorApp",
+    "name": "BrunchMark",
+    "version": "1.0.0",
+    "projectName": "BrunchMark",
     "devTools": true,
     "devtron": true,
     "desktopHCP": true,
@@ -44,14 +44,14 @@
     },
     "dependencies": {},
     "packageJsonFields": {
-        "description": "My Meteor App",
-        "author": "Me, Myself And I",
+        "description": "BrunchMark",
+        "author": "Egee",
         "private": true
     },
     "builderOptions": {
         "icon": ".desktop/assets/meteor.ico",
         "appId": "meteor.app",
-        "productName": "My Meteor App",
+        "productName": "BrunchMark",
         "compression": "maximum",
         "win": {
             "target": "nsis"
@@ -99,13 +99,13 @@
         },
         "appVersion": "@version",
         "buildVersion": "@version",
-        "appCopyright": "Copyright 2018 My Company - All rights reserved.",
+        "appCopyright": "Copyright 2019 Egee.io",
         "win32metadata": {
-            "CompanyName": "My Company",
-            "FileDescription": "MyMeteorApp",
-            "OriginalFilename": "MyMeteorApp.exe",
-            "ProductName": "MyMeteorApp",
-            "InternalName": "MyMeteorApp.exe"
+            "CompanyName": "Egee.io",
+            "FileDescription": "BrunchMark",
+            "OriginalFilename": "BrunchMark.exe",
+            "ProductName": "BrunchMark",
+            "InternalName": "BrunchMark.exe"
         }
     }
 }
