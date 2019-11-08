@@ -3,25 +3,71 @@ import { Template } from "meteor/templating";
 
 import "./body.html";
 
+const ubuntuMain = "rgba(233, 84, 32, 0.7)";
+const fedoraMain = "rgba(60, 110, 180, 0.7)";
+const ubuntuBorder = "rgba(233, 84, 32, 1)";
+const fedoraBorder = "rgba(60, 110, 180, 1)";
+
+const gtav = {
+  label: "GTA V",
+  data: [30.1, 22.5],
+  backgroundColor: [
+    ubuntuMain,
+    fedoraMain
+  ],
+  borderColor: [
+    ubuntuBorder,
+    fedoraBorder
+  ],
+  borderWidth: 1.2,
+};
+const tomb = {
+  label: "Tomb Raider 2013",
+  data: [34.4, 22.9],
+  backgroundColor: [
+    ubuntuMain,
+    fedoraMain
+  ],
+  borderColor: [
+    ubuntuBorder,
+    fedoraBorder
+  ],
+  borderWidth: 1.2,
+};
+const csgo = {
+  label: "CS:GO",
+  data: [51.4, 43.19],
+  backgroundColor: [
+    ubuntuMain,
+    fedoraMain
+  ],
+  borderColor: [
+    ubuntuBorder,
+    fedoraBorder
+  ],
+  borderWidth: 1.2,
+};
+const valley = {
+  label: "CS:GO",
+  data: [13.7, 13.0],
+  backgroundColor: [
+    ubuntuMain,
+    fedoraMain
+  ],
+  borderColor: [
+    ubuntuBorder,
+    fedoraBorder
+  ],
+  borderWidth: 1.2,
+};
+
 Template.body.onRendered(() => {
   const ctx = document.getElementById("myChart").getContext("2d");
   new Chart(ctx, {
     type: "bar",
     data: {
       labels: ["Ubuntu 18.04", "Fedora 31"],
-      datasets: [{
-        label: "Single-Core",
-        data: [478, 478],
-        backgroundColor: [
-          "rgba(233, 84, 32, 0.7)",
-          "rgba(60, 110, 180, 0.7)"
-        ],
-        borderColor: [
-          "rgba(233, 84, 32, 1)",
-          "rgba(60, 110, 180, 1)"
-        ],
-        borderWidth: 1.2,
-      }]
+      datasets: [gtav, tomb, csgo, valley]
     },
     options: {
       legend: {
@@ -30,7 +76,7 @@ Template.body.onRendered(() => {
       scales: {
         yAxes: [{
           ticks: {
-            suggestedMax: 550,
+            suggestedMax: 60,
             beginAtZero: true
           }
         }]
