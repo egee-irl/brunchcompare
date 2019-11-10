@@ -6,7 +6,8 @@
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
-    "desktop": "meteor-desktop"
+    "desktop": "meteor-desktop",
+    "bootstrap": "meteor --mobile-server=127.0.0.1:3000 &"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
