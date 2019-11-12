@@ -1,15 +1,16 @@
-import { Chart } from "chart.js";
-import { Template } from "meteor/templating";
+import { Chart } from 'chart.js'
+import { Template } from 'meteor/templating'
+import { ReactiveDict } from 'meteor/reactive-dict'
 
-import "./body.html";
+import './body.html'
 
-const ubuntuMain = "rgba(233, 84, 32, 0.7)";
-const fedoraMain = "rgba(60, 110, 180, 0.7)";
-const ubuntuBorder = "rgba(233, 84, 32, 1)";
-const fedoraBorder = "rgba(60, 110, 180, 1)";
+const ubuntuMain = 'rgba(233, 84, 32, 0.7)'
+const fedoraMain = 'rgba(60, 110, 180, 0.7)'
+const ubuntuBorder = 'rgba(233, 84, 32, 1)'
+const fedoraBorder = 'rgba(60, 110, 180, 1)'
 
 const gtav = {
-  label: "GTA V",
+  label: 'GTA V',
   data: [30.1, 22.5],
   backgroundColor: [
     ubuntuMain,
@@ -19,10 +20,10 @@ const gtav = {
     ubuntuBorder,
     fedoraBorder
   ],
-  borderWidth: 1.2,
-};
+  borderWidth: 1.2
+}
 const tomb = {
-  label: "Tomb Raider 2013",
+  label: 'Tomb Raider 2013',
   data: [34.4, 22.9],
   backgroundColor: [
     ubuntuMain,
@@ -32,10 +33,10 @@ const tomb = {
     ubuntuBorder,
     fedoraBorder
   ],
-  borderWidth: 1.2,
-};
+  borderWidth: 1.2
+}
 const csgo = {
-  label: "CS:GO",
+  label: 'CS:GO',
   data: [51.4, 43.19],
   backgroundColor: [
     ubuntuMain,
@@ -45,10 +46,10 @@ const csgo = {
     ubuntuBorder,
     fedoraBorder
   ],
-  borderWidth: 1.2,
-};
+  borderWidth: 1.2
+}
 const valley = {
-  label: "CS:GO",
+  label: 'CS:GO',
   data: [13.7, 13.0],
   backgroundColor: [
     ubuntuMain,
@@ -58,20 +59,19 @@ const valley = {
     ubuntuBorder,
     fedoraBorder
   ],
-  borderWidth: 1.2,
-};
+  borderWidth: 1.2
+}
 
 Template.body.onRendered(() => {
-  const ctx = document.getElementById("myChart").getContext("2d");
-  new Chart(ctx, {
-    type: "bar",
+  new Chart(document.getElementById('myChart').getContext('2d'), {
+    type: 'bar',
     data: {
-      labels: ["Ubuntu 18.04", "Fedora 31"],
+      labels: ['Ubuntu 18.04', 'Fedora 31'],
       datasets: [gtav, tomb, csgo, valley]
     },
     options: {
       legend: {
-        display: false,
+        display: false
       },
       scales: {
         yAxes: [{
@@ -82,5 +82,18 @@ Template.body.onRendered(() => {
         }]
       }
     }
-  });
-});
+  })
+})
+
+Template.body.helpers({
+  isActive () {
+    return 'is-active'
+  }
+})
+
+Template.body.events({
+  'click .is-active' (event, instance) {
+    // console.log(event)
+    instance.state.set('menuOpen', !instance.state.get('menuOpen'))
+  }
+})
