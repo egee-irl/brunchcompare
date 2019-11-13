@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('geekbench');
+  this.route('games');
 });
 
 export default Router;
