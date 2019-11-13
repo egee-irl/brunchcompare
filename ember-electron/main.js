@@ -46,15 +46,13 @@ app.on('ready', () => {
     width: 800,
     height: 600,
   });
-
   // If you want to open up dev tools programmatically, call
   // mainWindow.openDevTools();
-
+  mainWindow.setMenuBarVisibility(false);
   const emberAppLocation = 'serve://dist';
 
   // Load the ember application using our custom protocol/scheme
   mainWindow.loadURL(emberAppLocation);
-
   // If a loading operation goes wrong, we'll send Electron back to
   // Ember App entry point
   mainWindow.webContents.on('did-fail-load', () => {
