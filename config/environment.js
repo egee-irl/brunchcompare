@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'brunchcompare',
+    modulePrefix: 'brunchmark',
     environment,
     rootURL: '/',
     locationType: 'auto',

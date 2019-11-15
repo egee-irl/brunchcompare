@@ -47,7 +47,7 @@ app.on('ready', () => {
     height: 600,
   });
   // If you want to open up dev tools programmatically, call
-  // mainWindow.openDevTools();
+  mainWindow.openDevTools();
   mainWindow.setMenuBarVisibility(false);
   const emberAppLocation = 'serve://dist';
 

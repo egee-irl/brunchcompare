@@ -15,7 +15,7 @@ module.exports = {
     "packageManager": "npm"
   },
   "electronWinstallerConfig": {
-    "name": "brunchcompare"
+    "name": "brunchmark"
   },
   "electronInstallerDebian": {},
   "electronInstallerRedhat": {},
@@ -25,6 +25,6 @@ module.exports = {
   },
   "windowsStoreConfig": {
     "packageName": "",
-    "name": "brunchcompare"
+    "name": "brunchmark"
   }
 };
