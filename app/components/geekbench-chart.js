@@ -1,38 +1,6 @@
 import Component from '@ember/component';
 import { Chart } from 'chart.js'
 
-const ubuntuMain = 'rgba(233, 84, 32, 0.7)'
-const fedoraMain = 'rgba(60, 110, 180, 0.7)'
-const ubuntuBorder = 'rgba(233, 84, 32, 1)'
-const fedoraBorder = 'rgba(60, 110, 180, 1)'
-
-const singleCore = {
-  label: 'Single-Core',
-  data: [30.1, 22.5],
-  backgroundColor: [
-    ubuntuMain,
-    fedoraMain
-  ],
-  borderColor: [
-    ubuntuBorder,
-    fedoraBorder
-  ],
-  borderWidth: 1.2
-}
-const multiCore = {
-  label: 'Multi-Core',
-  data: [34.4, 22.9],
-  backgroundColor: [
-    ubuntuMain,
-    fedoraMain
-  ],
-  borderColor: [
-    ubuntuBorder,
-    fedoraBorder
-  ],
-  borderWidth: 1.2
-}
-
 export default Component.extend({
   didRender () {
     let currentTab = ""
@@ -51,20 +19,23 @@ export default Component.extend({
     new Chart(document.getElementById(currentTab).getContext('2d'), {
       type: 'bar',
       data: {
-        labels: ['Ubuntu 18.04', 'Fedora 31'],
-        datasets: [singleCore, multiCore,]
+        labels: ['Single-Core', 'Multi-Core'],
+        datasets: [
+          {
+            label: "Ubuntu 18.04",
+            backgroundColor: 'rgba(233, 84, 32, 0.7)',
+            data: [478, 1530]
+          }, {
+            label: "Solus 4.0",
+            backgroundColor: 'rgba(60, 110, 180, 0.7)',
+            data: [565, 1727]
+          }
+        ]
       },
       options: {
-        legend: {
-          display: false
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              suggestedMax: 60,
-              beginAtZero: true
-            }
-          }]
+        title: {
+          display: true,
+          text: 'Geekbench 5'
         }
       }
     })

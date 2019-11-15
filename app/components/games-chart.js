@@ -1,11 +1,6 @@
 import Component from '@ember/component';
 import { Chart } from 'chart.js'
 
-const ubuntuMain = 'rgba(233, 84, 32, 0.7)'
-const fedoraMain = 'rgba(60, 110, 180, 0.7)'
-const ubuntuBorder = 'rgba(233, 84, 32, 1)'
-const fedoraBorder = 'rgba(60, 110, 180, 1)'
-
 export default Component.extend({
   didRender () {
     let currentTab = ""
@@ -31,9 +26,9 @@ export default Component.extend({
             backgroundColor: 'rgba(233, 84, 32, 0.7)',
             data: [30.1, 34.4, 51.4, 13.7]
           }, {
-            label: "Fedora 31",
+            label: "Solus 4.0",
             backgroundColor: 'rgba(60, 110, 180, 0.7)',
-            data: [22.5, 22.9, 43.1, 13]
+            data: [12.7, 24.2, 42.1, 10.3]
           }
         ]
       },
