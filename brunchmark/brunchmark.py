@@ -1,8 +1,12 @@
 import sys
 import random
-from PySide2.QtWidgets import (QApplication, QLabel, QPushButton,
-                               QVBoxLayout, QWidget)
+from PySide2.QtWidgets import (QApplication, QLabel, QPushButton, QVBoxLayout, QWidget)
+
 from PySide2.QtCore import Slot, Qt
+from PySide2.QtWidgets import QApplication
+from PySide2.QtQuick import QQuickView
+from PySide2.QtCore import QUrl
+from PySide2.QtQml import QQmlApplicationEngine
 
 class MyWidget(QWidget):
     def __init__(self):
@@ -28,12 +32,11 @@ class MyWidget(QWidget):
         self.text.setText(random.choice(self.hello))
 
 def brunchmark():
-    app = QApplication(sys.argv)
-
-    widget = MyWidget()
-    widget.resize(800, 600)
-    widget.show()
-
+    app = QApplication([])
+    engine = QQmlApplicationEngine()
+    engine.load("./brunchmark/brunchmark.qml")
+    win = engine.rootObjects()[0]
+    win.show()
     sys.exit(app.exec_())
 
 # if __name__ == "__main__":
