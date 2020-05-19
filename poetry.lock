@@ -1,0 +1,40 @@
+[[package]]
+category = "main"
+description = "Python bindings for the Qt cross-platform application and UI framework"
+name = "pyside2"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <3.9"
+version = "5.14.2.1"
+
+[package.dependencies]
+shiboken2 = "5.14.2.1"
+
+[[package]]
+category = "main"
+description = "Python / C++ bindings helper module"
+name = "shiboken2"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <3.9"
+version = "5.14.2.1"
+
+[metadata]
+content-hash = "59e6547cdb77ce43077d4917a61aeaf03d4f001fb6d23f1a3fa4513050403ff7"
+python-versions = "~3.8"
+
+[metadata.files]
+pyside2 = [
+    {file = "PySide2-5.14.2.1-5.14.2-cp27-cp27m-macosx_10_13_intel.whl", hash = "sha256:71d0416e69f0ac4d5d0f9892c819b2896a4e821bc83b29932769060119f3292c"},
+    {file = "PySide2-5.14.2.1-5.14.2-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:7d5054009ced176cf78d71d2787bdcd676bc990004bec0e7079f7bdfe7edffe5"},
+    {file = "PySide2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-abi3-macosx_10_13_intel.whl", hash = "sha256:a6390619b9c8713ba190dd3fa116a2d9f63597cb0f902fbf31b2657023936a3a"},
+    {file = "PySide2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-abi3-manylinux1_x86_64.whl", hash = "sha256:174e1863ae3526bae8ae946b24cccb472dffd7e643bc47ae4d2de39cac583a9c"},
+    {file = "PySide2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-none-win32.whl", hash = "sha256:e21058fcd8d2cb9871fc61f9d35ed15f0e0c4718c5d463a2e37be1d67b8c40b4"},
+    {file = "PySide2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-none-win_amd64.whl", hash = "sha256:93c19beef80ef54392e6cd0de937be4e1603560229eb38738c8b50bbb8da90f7"},
+]
+shiboken2 = [
+    {file = "shiboken2-5.14.2.1-5.14.2-cp27-cp27m-macosx_10_13_intel.whl", hash = "sha256:d285d476a76f254bff69cc58c1d4385df295b42de1a818d4a8d11694c2d728fc"},
+    {file = "shiboken2-5.14.2.1-5.14.2-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:73d03e74f542204e351539e42ab3e3727a69408e1497af4c6e84fb66c3e706d8"},
+    {file = "shiboken2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-abi3-macosx_10_13_intel.whl", hash = "sha256:16b59490228bf923ea7c8ed6edcb4f7349ce5a5fc30369190c41487baf6d4aaa"},
+    {file = "shiboken2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-abi3-manylinux1_x86_64.whl", hash = "sha256:cd6ba0ba0d070c8ec090ad3eb10440989f7e5a4404c6b087f8f695a75a01e1dc"},
+    {file = "shiboken2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-none-win32.whl", hash = "sha256:fe4d0cf6737f1d01944be4cf3b401d74015c515ab84622bf04f47d64ffcd39f9"},
+    {file = "shiboken2-5.14.2.1-5.14.2-cp35.cp36.cp37.cp38-none-win_amd64.whl", hash = "sha256:c022203b7cf01df6ad0bb190d286c2965958243a16e47bee8c5e6bbb9d0cd475"},
+]
