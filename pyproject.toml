@@ -10,10 +10,11 @@ python = "~3.8"
 PySide2 = "~5.14"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.8.1"
 
+[tool.poetry.scripts]
+brunchmark = "brunchmark.brunchmark:brunchmark"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
-[tool.poetry.scripts]
-brunchmark = "brunchmark.brunchmark:brunchmark"

@@ -1,7 +1,6 @@
 import sys
 import random
 from PySide2.QtWidgets import (QApplication, QLabel, QPushButton, QVBoxLayout, QWidget)
-
 from PySide2.QtCore import Slot, Qt
 from PySide2.QtWidgets import QApplication
 from PySide2.QtQuick import QQuickView
@@ -33,11 +32,21 @@ class MyWidget(QWidget):
 
 def brunchmark():
     app = QApplication([])
-    engine = QQmlApplicationEngine()
-    engine.load("./brunchmark/brunchmark.qml")
-    win = engine.rootObjects()[0]
-    win.show()
-    sys.exit(app.exec_())
+    view = QQuickView()
+    url = QUrl("./brunchmark/brunchmark.qml")
+
+    view.setSource(url)
+    view.show()
+    app.exec_()
+
+
+
+    # app = QApplication([])
+    # engine = QQmlApplicationEngine()
+    # engine.load("./brunchmark/brunchmark.qml")
+    # win = engine.rootObjects()[0]
+    # win.show()
+    # sys.exit(app.exec_())
 
 # if __name__ == "__main__":
 #     app = QApplication(sys.argv)
