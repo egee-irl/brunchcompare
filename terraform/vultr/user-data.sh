@@ -4,6 +4,8 @@ set -ex
 systemctl disable --now unattended-upgrades
 systemctl disable --now apt-daily
 
+# vultr's cloud init gets confused sometimes so we'll wait until it catches up
+sleep 60
 apt-get install -y docker.io git
 
 docker pull ghcr.io/egee-irl/brunchmark:botan
