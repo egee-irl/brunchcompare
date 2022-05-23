@@ -10,7 +10,7 @@ docker pull ghcr.io/egee-irl/brunchmark:botan
 docker pull ghcr.io/egee-irl/brunchmark:helsing
 docker pull ghcr.io/egee-irl/brunchmark:primesieve
 
-git clone git@github.com:egee-irl/brunchmark.git /tmp/brunch/
+git clone https://github.com/egee-irl/brunchmark.git /tmp/brunch/
 cp /tmp/brunch/runem.sh /root/runem.sh
 chmod +x /root/runem.sh
 mkdir -p "/root/results/$HOSTNAME/"
