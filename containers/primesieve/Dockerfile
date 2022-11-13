@@ -7,4 +7,3 @@ WORKDIR "/build/"
 RUN cmake . && make && ldconfig
 RUN apt-get purge -y ${PKGS} && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 ENTRYPOINT [ "./primesieve" ]
-# -test
